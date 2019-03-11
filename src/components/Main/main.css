@@ -7,3 +7,9 @@
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
   font-size: 14px;
 }
+
+@media only screen and (max-width: 450px) {
+  .site-content {
+    width: 250px;
+  }
+}
