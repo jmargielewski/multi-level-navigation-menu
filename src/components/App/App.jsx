@@ -8,7 +8,6 @@ import './app.css';
 class App extends Component {
   componentDidMount() {
     const { fetchData } = this.props;
-
     fetchData();
   }
 
