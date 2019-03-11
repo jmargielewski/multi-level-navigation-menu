@@ -1,5 +1,6 @@
 import React from 'react';
+import './main.css';
 
-const Main = () => <div>Main</div>;
+const Main = ({ content }) => <div className="site-content">{content}</div>;
 
 export default Main;

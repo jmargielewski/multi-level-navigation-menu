@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import Hamburger from '../Hamburger/Hanburger';
 import './header.css';
 
-class Header extends Component {
-  componentDidMount() {}
-
+class Header extends PureComponent {
   onClick = (content) => {
-    console.log(content);
-  };
-
-  onKeyPress = () => {
-    console.log('just key press');
+    this.props.onClick(content);
   };
 
   render() {
     const { menuStructure } = this.props;
-    console.log(menuStructure);
     return (
       <header className="site-header">
         <h1 className="site-heading">Multi Level Menu</h1>
