@@ -5,6 +5,14 @@ import './header.css';
 class Header extends Component {
   componentDidMount() {}
 
+  onClick = (content) => {
+    console.log(content);
+  };
+
+  onKeyPress = () => {
+    console.log('just key press');
+  };
+
   render() {
     const { menuStructure } = this.props;
     console.log(menuStructure);
@@ -18,8 +26,13 @@ class Header extends Component {
                 <span className="site-menu--value">{menuItem.label}</span>
                 {menuItem.child && (
                   <ul className="site-submenu">
-                    {menuItem.child.map(({ key, label }) => (
-                      <li className="site-submenu--item" key={key}>
+                    {menuItem.child.map(({ key, label, content }) => (
+                      <li
+                        key={key}
+                        className="site-submenu--item"
+                        onClick={() => this.onClick(content)}
+                        onKeyPress={this.onKeyPress}
+                      >
                         <span className="site-submenu--value">{label}</span>
                       </li>
                     ))}

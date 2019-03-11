@@ -1,18 +1,86 @@
 .site-header {
-  background: #003e60;
+  background: #004b74;
   text-align: left;
   padding: 0 40px;
   position: relative;
   height: 64px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .site-heading {
+  display: inline-block;
   margin: 0;
   text-transform: uppercase;
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   font-size: 21px;
   line-height: 64px;
+}
+
+.site-menu {
+  display: inline-block;
+  line-height: 64px;
+}
+
+.site-menu--item {
+  display: inline-block;
+  position: relative;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.site-menu--item:hover {
+  background: #015e90;
+}
+
+.site-menu--value {
+  color: #000;
+}
+
+.site-menu--value:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+  vertical-align: middle;
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-bottom: 0;
+  border-left: 5px solid transparent;
+}
+
+.site-submenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  line-height: 32px;
+}
+
+.site-submenu--item {
+  padding: 10px;
+  text-align: center;
+  display: block;
+}
+
+.site-submenu--item:hover {
+  background: #ddd;
+}
+
+.site-submenu--value {
+  color: #000;
+  text-decoration: none;
+}
+
+.site-menu--item:hover > .site-submenu {
+  display: block;
 }
 
 @media only screen and (min-width: 650px) {
